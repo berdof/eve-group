@@ -1,0 +1,35 @@
+.footer{
+  @extend .wrapper;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 35px;
+  position: relative;
+}
+
+.brands-slider{
+  display: block;
+  overflow: hidden;
+}
+
+.brands-slider__in{
+  overflow: hidden;
+  li{
+    float: left;
+    text-align: center;
+    a{
+      display: inline-block;
+
+    }
+  }
+}
+
+.nav_soc{
+  @extend .nav_hor;
+  position: absolute;
+  right: 40px;
+  bottom: 45px;
+}
+
+.nav_soc__fb{
+  @include sprite-background("soc__fb");
+}

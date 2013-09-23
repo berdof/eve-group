@@ -1,0 +1,41 @@
+.header {
+  @include box-sizing(border-box);
+  padding: 20px 0 28px 0;
+}
+
+.logo {
+  @include sprite-background(logo);
+}
+
+.language{
+  padding: 0 0 0 53px;
+  li{
+
+  }
+  a{
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}   
+
+.header__tel {
+  font-style: italic;
+  font-size: 26px;
+  padding-bottom: 15px;
+  text-align: right;
+}
+
+.header__nav {
+  @extend .nav_hor;
+  li{
+    padding: 0 17px;
+  }
+  a{
+    font-style: italic;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+  }
+}

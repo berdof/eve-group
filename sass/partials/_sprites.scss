@@ -1,0 +1,23 @@
+
+$sprites: sprite-map("sprite/*.png", $position: 0%, $spacing: 25px, $repeat: no-repeat, $readonly-spacing: 10px);
+
+
+@mixin sprite-background($name, $dimensions: true) {
+  background-image: sprite-url($sprites);
+  background-position: sprite-position($sprites, $name);
+  background-repeat: no-repeat;
+  @if $dimensions == true{
+    height: image-height(sprite-file($sprites, $name));
+    width: image-width(sprite-file($sprites, $name));
+    display: block;
+  }
+
+}
+
+@function sprite-width($name, $smap: $sprites) {
+  @return image-width(sprite-file($smap, $name));
+}
+
+@function sprite-height($name, $smap: $sprites) {
+  @return image-height(sprite-file($smap, $name));
+}

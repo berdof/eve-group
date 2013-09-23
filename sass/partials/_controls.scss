@@ -1,0 +1,24 @@
+.btn {
+
+}
+
+
+
+.textbox,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=search] {
+
+  &:focus{
+
+  }
+
+  &.error{
+
+  }
+
+}
+
+

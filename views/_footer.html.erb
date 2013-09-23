@@ -1,0 +1,32 @@
+<footer class="footer">
+    <div class="wrapper">
+        <div class="brands-slider">
+            <ul class="brands-slider__in">
+                <% (1..11).each do |n| %>
+                    <li><a href="javascript:void(0);"><img src="images/brands/<%=n%>.jpg" alt=""/></a></li>
+                    <li><a href="javascript:void(0);"><img src="images/brands/<%=12- n%>.jpg" alt=""/></a></li>
+                <% end %>
+            </ul>
+        </div>
+        <p>Контактная информация: Россия, 127051, Москва, Большой Каретный пер. 20 стр.3. Тел./факс +7 (495) 664-25-40 </p>
+
+        <p>© 2002-2013 EGWWS </p>
+        <ul class="nav_soc">
+            <li><a class="nav_soc__fb" href="javascript:void(0);"></a></li>
+        </ul>
+    </div>
+</footer>
+
+<% if ENV["RACK_ENV"] == "production" %>
+    <!--<script src="js/all.min.js" type="text/javascript"></script>-->
+    <!--place scripts for production version here-->
+<% else %>
+    <!--place scripts for dev version here-->
+<% end %>
+<script src="js/vendors/jquery-1.10.2.min.js"></script>
+<script src="js/vendors/jcarousel.lite.js"></script>
+<script src="js/Eve.js"></script>
+
+<%= livereload_js unless ENV["RACK_ENV"] == "production" %>
+</body>
+</html>
