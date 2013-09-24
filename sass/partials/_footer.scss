@@ -4,11 +4,17 @@
   padding-top: 18px;
   padding-bottom: 35px;
   position: relative;
+  font-family: $fontMinionPro;
+  p{
+    font-size: 13px;
+    padding-bottom: 8px;
+  }
 }
 
 .brands-slider{
   display: block;
   overflow: hidden;
+  margin-bottom: 51px;
 }
 
 .brands-slider__in{
@@ -26,10 +32,15 @@
 .nav_soc{
   @extend .nav_hor;
   position: absolute;
-  right: 40px;
-  bottom: 45px;
+  right: 44px;
+  bottom: 57px;
 }
 
 .nav_soc__fb{
   @include sprite-background("soc__fb");
+}
+
+.copy{
+  color: #d9dcdf;
+  font-size: 11px !important;
 }

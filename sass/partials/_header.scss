@@ -1,6 +1,7 @@
 .header {
   @include box-sizing(border-box);
-  padding: 20px 0 28px 0;
+  padding: 20px 41px 24px 47px;
+  overflow: hidden;
 }
 
 .logo {
@@ -8,15 +9,37 @@
 }
 
 .language{
-  padding: 0 0 0 53px;
+  padding: 10px 0 0 53px;
+  position: absolute;
+  right: 42px;
+  top: 69px;
+  &:after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 18px;
+    display: block;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #fff;
+  }
   li{
-
+    display: none;
+    &:first-child{
+      display: block;
+    }
   }
   a{
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
+    font-family: $fontPragmatica;
+  }
+  &.open{
+    li{
+      display: block;
+    }
   }
 }   
 
@@ -25,15 +48,21 @@
   font-size: 26px;
   padding-bottom: 15px;
   text-align: right;
+  font-family: $fontAllegretto;
+  display: block;
+  padding: 0 0 23px 0;
+
 }
 
 .header__nav {
   @extend .nav_hor;
+  margin: 0 83px 0 0;
   li{
-    padding: 0 17px;
+    padding: 0 20px;
   }
   a{
     font-style: italic;
+    font-family: $fontAllegretto;
     color: #fff;
     font-size: 30px;
     text-decoration: none;

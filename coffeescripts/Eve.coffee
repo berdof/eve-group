@@ -20,11 +20,15 @@ class Eve
       selector = $(@).data("modalShow")
       $("#{selector}, .modal-overlay").fadeIn()
       return
+    languageClick:()->
+      $(@).closest("ul").toggleClass("open")
+      return
   attachEvents: ->
     self = this
     $(".form input[type=submit]").on('click',{self:self} , self.eventHandlers.formSubmitClick)
     $(".modal-overlay, .modal__close").on('click',{self:self} , self.eventHandlers.hidePopupClick)
     $("[data-modal-show]").on('click',{self:self} , self.eventHandlers.showPopupClick)
+    $(".language li").on('click',{self:self} , self.eventHandlers.languageClick)
     return
 
   validate:(form)->
@@ -125,7 +129,7 @@ class Eve
       visible: 11
       start: 0
       scroll:1
-      auto:true
+      auto:on
       speed:300
       autoWidth:true
       responsive:true

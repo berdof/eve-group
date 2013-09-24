@@ -25,6 +25,9 @@
         var selector;
         selector = $(this).data("modalShow");
         $("" + selector + ", .modal-overlay").fadeIn();
+      },
+      languageClick: function() {
+        $(this).closest("ul").toggleClass("open");
       }
     };
 
@@ -40,6 +43,9 @@
       $("[data-modal-show]").on('click', {
         self: self
       }, self.eventHandlers.showPopupClick);
+      $(".language li").on('click', {
+        self: self
+      }, self.eventHandlers.languageClick);
     };
 
     Eve.prototype.validate = function(form) {

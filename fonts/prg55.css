@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PragmaticaRegular';
+    src: url('prg55.eot');
+    src: url('prg55.eot') format('embedded-opentype'),
+         url('prg55.woff') format('woff'),
+         url('prg55.ttf') format('truetype'),
+         url('prg55.svg#PragmaticaRegular') format('svg');
+}

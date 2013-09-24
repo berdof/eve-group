@@ -1,6 +1,6 @@
 
 body {
-  @include font-bold();
+  font-family: $fontHelvectica;
   color: $textColor;
   min-width: $wrapper-width;
   background-color: $bgColor;
