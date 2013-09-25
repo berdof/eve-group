@@ -144,18 +144,9 @@
         auto: false,
         autoWidth: true,
         responsive: true,
-        circular: false,
+        circular: true,
         btnNext: ".slider__next",
-        btnPrev: ".slider__prev",
-        afterEnd: function() {
-          var index, length;
-          index = $(".slider__in li.active").index();
-          length = $(".slider__in li").length - 1;
-          console.log(index);
-          console.log(length);
-          $(".slider__prev")[index === 0 ? "fadeOut" : "fadeIn"](1);
-          $(".slider__next")[index === length ? "fadeOut" : "fadeIn"](1);
-        }
+        btnPrev: ".slider__prev"
       });
     };
 

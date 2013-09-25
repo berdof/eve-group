@@ -108,19 +108,12 @@ class Eve
       scroll:1
       speed:600
       auto:off
-      autoWidth:true
-      responsive:true
-      circular:false
+      autoWidth:on
+      responsive:on
+      circular:on
       btnNext: ".slider__next"
       btnPrev: ".slider__prev"
-      afterEnd:()->
-        index = $(".slider__in li.active").index()
-        length = $(".slider__in li").length - 1
-        console.log index
-        console.log length
-        $(".slider__prev")[if index is 0 then "fadeOut" else "fadeIn"](1)
-        $(".slider__next")[if index is length then "fadeOut" else "fadeIn"](1)
-        return
+
     })
     return
 
