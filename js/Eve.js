@@ -146,7 +146,8 @@
         responsive: true,
         circular: true,
         btnNext: ".slider__next",
-        btnPrev: ".slider__prev"
+        btnPrev: ".slider__prev",
+        btnGo: $(".slider__pager a")
       });
     };
 

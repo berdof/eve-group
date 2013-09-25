@@ -63,6 +63,42 @@
     position: relative;
     top: 16px;
   }
+  p{
+    font-family: $fontHelvectica;
+    color: #0f1e2e;
+    font-size: 26px;
+    line-height: 30px;
+    width: 388px;
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.slider__pager{
+  position: absolute;
+  z-index: 10000;
+  left: 0;
+  bottom: 26px;
+  width: 100%;
+  text-align: center;
+  a{
+    display: inline-block;
+    @include border-radius(50px);
+    margin: 0 3px;
+
+    &.active{
+      border: 1px solid #fff;
+    }
+    i{
+      display: block;
+      width: 6px;
+      height: 6px;
+      height: 6px;
+      margin: 3px;
+      background: #fff;
+      @include border-radius(50px);
+    }
+  }
 }
 
 @for $i from 1 to 6 {

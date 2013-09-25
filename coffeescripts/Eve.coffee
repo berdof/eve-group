@@ -113,6 +113,7 @@ class Eve
       circular:on
       btnNext: ".slider__next"
       btnPrev: ".slider__prev"
+      btnGo:$(".slider__pager a")
 
     })
     return

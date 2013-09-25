@@ -1,7 +1,9 @@
 .header {
+  @extend .clearfix;
   @include box-sizing(border-box);
-  padding: 20px 41px 24px 47px;
-  overflow: hidden;
+  padding: 20px 41px 0 47px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -57,8 +59,15 @@
 .header__nav {
   @extend .nav_hor;
   margin: 0 83px 0 0;
+
   li{
     padding: 0 20px;
+    padding-bottom: 24px;
+    &:hover{
+      ul{
+        display: block;
+      }
+    }
   }
   a{
     font-style: italic;
@@ -66,5 +75,27 @@
     color: #fff;
     font-size: 30px;
     text-decoration: none;
+  }
+  ul{
+    position: absolute;
+    top: 123px;
+    width: 233px;
+    background: rgba(15,30,46,.74);
+    padding: 17px 0 20px 0;
+    display: none;
+    li{
+      float: none;
+      display: block;
+      padding: 25px 20px 0 !important ;
+      white-space: normal;
+      &:first-child{
+        padding-top: 0 !important;
+      }
+    }
+    a{
+      font-family: $fontMinionPro;
+      font-style: italic;
+      font-size: 18px;
+    }
   }
 }
